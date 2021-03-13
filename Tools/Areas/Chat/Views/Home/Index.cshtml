@@ -1,0 +1,493 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Chat/Views/Shared/_ChatLayoutPage.cshtml";
+}
+<!-- Main Content -->
+<div class="main-content">
+    <div class="page-content">
+        <div class="container-fluid">
+            <!-- Page Title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group mr-2" role="group">
+                                <button type="button" class="btn mybtn font-weight-500" style="padding: 2px 12px;">Chat <span>10</span></button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn mybtn font-weight-500" style="padding: 2px 12px;">
+                                    <i class="bx bx-message-dots"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="page-title-right">
+                            <form class="app-search d-lg-block p-0 shodow-md">
+                                <div class="position-relative">
+                                    <input type="text" class="form-control visisearch" placeholder="Search...">
+                                    <span class="bx bx-search-alt"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Page Title -->
+            <!-- Table -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="">
+                        <div class="accordion" id="incomingchats">
+                            <!-- Incoming Chat -->
+                            <div class="card bg-transparent incomingcollaps">
+                                <div class="card-header incomingtitle p-0" id="incomingchats">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left incomingcls" type="button" data-toggle="collapse" data-target="#incomingchats1" aria-expanded="true" aria-controls="incomingchats1">
+                                            Incoming Chats
+                                            <span class="newwebquery border border-light">
+                                                Website
+                                                <span>10</span>
+                                            </span>
+                                            <span class="newwebquery border border-light">
+                                                Facebook
+                                                <span>8</span>
+                                            </span>
+                                            <span class="float-right"><img src="/Areas/Chat/assets/images/arrow.png"></span>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="incomingchats1" class="collapse show" aria-labelledby="incomingchats" data-parent="#incomingchats">
+                                    <form class="app-search collapsesearch d-lg-block p-0 shodow-md">
+                                        <div class="position-relative">
+                                            <input type="text" class="form-control visisearch" placeholder="Search...">
+                                            <span class="bx bx-search-alt"></span>
+                                        </div>
+                                    </form>
+                                    <div class="table-responsive webfbtable">
+                                        <!-- Website -->
+                                        <button class="btn btn-link btn-block text-left websitebtn" type="button" data-toggle="collapse" data-target="#website" aria-expanded="true" aria-controls="website">
+                                            Websites
+                                            <span class="float-right"><img src="~/Areas/Chat/assets/images/arrow-black.png"></span>
+                                        </button>
+                                        <div id="website" class="collapse webfbmodal" aria-labelledby="website" data-parent="#website">
+                                            <table id="datatable" class="table table-nowrap table-hover table-centered table-borderless mb-0 bg-white tablemargin">
+                                                <thead class="tablethead">
+                                                    <tr>
+                                                        <th scope="col" class="text-center">Website</th>
+                                                        <th scope="col">Name & Message</th>
+                                                        <th scope="col">Time</th>
+                                                        <th scope="col">Source</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- End Website -->
+                                        <!-- Facebook -->
+                                        <button class="btn btn-link btn-block text-left websitebtn collapsed" type="button" data-toggle="collapse" data-target="#facebook" aria-expanded="false" aria-controls="facebook">
+                                            Facebook
+                                            <span class="float-right"><img src="~/Areas/Chat/assets/images/arrow-black.png"></span>
+                                        </button>
+                                        <div id="facebook" class="collapse webfbmodal" aria-labelledby="facebook" data-parent="#facebook">
+                                            <table id="datatable1" class="table table-nowrap table-hover table-centered table-borderless mb-0 bg-white tablemargin">
+                                                <thead class="tablethead">
+                                                    <tr>
+                                                        <th scope="col" class="text-center">Facebook</th>
+                                                        <th scope="col">Name & Message</th>
+                                                        <th scope="col">Time</th>
+                                                        <th scope="col">Source</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- End Facebook -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Incoming Chat -->
+                            <!-- Incoming Chat 2 -->
+                            <div class="card bg-transparent incomingcollaps" ">
+                                <div class="card-header incomingtitle p-0" id="incomingchats">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left incomingcls" type="button" data-toggle="collapse" data-target="#incomingchats2" aria-expanded="true" aria-controls="incomingchats2">
+                                            Incoming Chats
+                                            <span class="newwebquery border border-light">
+                                                Website
+                                                <span>10</span>
+                                            </span>
+                                            <span class="newwebquery border border-light">
+                                                Facebook
+                                                <span>8</span>
+                                            </span>
+
+                                            <span class="float-right"><img src="/Areas/Chat/assets/images/arrow.png"></span>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="incomingchats2" class="collapse show" aria-labelledby="incomingchats" data-parent="#incomingchats2">
+                                    <form class="app-search collapsesearch d-lg-block p-0 shodow-md">
+                                        <div class="position-relative">
+                                            <input type="text" class="form-control visisearch" placeholder="Search...">
+                                            <span class="bx bx-search-alt"></span>
+                                        </div>
+                                        <select id="formrow-inputState" class="form-control">
+                                            <option>Choose...</option>
+                                            <option>Website</option>
+                                            <option>Facebook</option>
+                                        </select>
+                                    </form>
+                                    <div class="table-responsive webfbtable">
+                                        <!-- Website -->
+                                        <button class="btn btn-link btn-block text-left websitebtn" type="button" data-toggle="collapse" data-target="#website1" aria-expanded="true" aria-controls="website1">
+                                            Websites
+                                            <span class="float-right"><img src="~/Areas/Chat/assets/images/arrow-black.png"></span>
+                                        </button>
+                                        <div id="website1" class="collapse webfbmodal" aria-labelledby="website1" data-parent="#website1">
+                                            <table id="datatable" class="table table-nowrap table-hover table-centered table-borderless mb-0 bg-white tablemargin">
+                                                <thead class="tablethead">
+                                                    <tr>
+                                                        <th scope="col" class="text-center">Website</th>
+                                                        <th scope="col">Name & Message</th>
+                                                        <th scope="col">Time</th>
+                                                        <th scope="col">Source</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom viewchattr" data-toggle="modal" data-target="#viewchat">
+                                                        <td class="text-center">
+                                                            <i class="bx bx-world webicon text-blue"></i>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <small>New Delhi, India</small>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i> 14 July, 2020-04:17 PM</td>
+                                                        <td>
+                                                            <p class="font-weight-500 m-0">Google</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- End Website -->
+                                        <!-- Facebook -->
+                                        <button class="btn btn-link btn-block text-left websitebtn collapsed" type="button" data-toggle="collapse" data-target="#facebook1" aria-expanded="false" aria-controls="facebook1">
+                                            Facebook
+                                            <span class="float-right"><img src="~/Areas/Chat/assets/images/arrow-black.png"></span>
+                                        </button>
+                                        <div id="facebook1" class="collapse webfbmodal" aria-labelledby="facebook1" data-parent="#facebook1">
+                                            <table id="datatable1" class="table table-nowrap table-hover table-centered table-borderless mb-0 bg-white tablemargin">
+                                                <thead class="tablethead">
+                                                    <tr>
+                                                        <th scope="col" class="text-center">Facebook</th>
+                                                        <th scope="col">Name & Message</th>
+                                                        <th scope="col">Time</th>
+                                                        <th scope="col">Source</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td class="text-center">
+                                                            <i class="bx bxl-facebook-square webicon text-fb"></i>
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript: void(0);" class="team-member tableprofile" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paritosh Mishra">
+                                                                <img src="~/Areas/Chat/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                            </a>
+                                                            <h5 class="text-truncate font-size-14 m-0">Paritosh Mishra (81125678)</h5>
+                                                            <p class="text-black mb-0 tablemessage">It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. It will be as simple as Occidental. </p>
+                                                        </td>
+                                                        <td><i class="bx bx-calendar text-blue"></i>  14 July, 2020-16:17</td>
+                                                        <td><p class="font-weight-500">Paritosh Mishra</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- End Facebook -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Incoming Chat 2 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Form -->
+        </div>
+        <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->   
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <script>document.write(new Date().getFullYear())</script> © Howmayassist.
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-right d-none d-sm-block">
+                        Design & Develop by Paritosh Mishra
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+</div>
+<!-- End Main Content-->

@@ -1,0 +1,64 @@
+﻿@using System.Web.Optimization;
+<!DOCTYPE html>
+<html>
+<head>
+    @*<meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>*@
+
+    <meta charset="utf-8" />
+    <title>Visitors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @RenderSection("head", required: false)
+    @RenderSection("scripts", false)
+    @Styles.Render("~/bundles/AdminCss")
+</head>
+<body>
+    <!-- Layout Wrapper -->
+    <div id="layout-wrapper">
+
+        @Html.Partial("_Header")
+        @Html.Partial("_LeftSlide")
+        @RenderBody()
+        @Html.Partial("_ChatsModels")
+    </div>
+    <!-- END Layout Wrapper -->
+    <!-- JAVASCRIPT -->
+    @Scripts.Render("~/bundles/AdminJs")
+    <!-- Data Table -->
+    <script>
+        $(document).ready(function () {
+            $('#datatable1').DataTable();
+        });
+
+        $(document).ready(function () {
+            $('#datatable3').DataTable();
+        });
+    </script>
+    <!-- End Data Table -->
+    <!-- Past Chat -->
+    <script>
+        $(document).ready(function () {
+            $("#pastchat").click(function () {
+                $(".modalchattextarea").hide();
+                $(".pastchattable").show();
+            });
+            $("#pastchatbackbtn").click(function () {
+                $(".modalchattextarea").show();
+                $(".pastchattable").hide();
+            });
+            $(".viewchat").click(function () {
+                $(".modalchattextarea").show();
+                $(".pastchattable").hide();
+            });
+            $(".pastchattr").click(function () {
+                $("#viewchat").hide();
+            });
+            $("#pastchatmodalclosebtn").click(function () {
+                $("#viewchat").show();
+                $("#pastchatmessage").hide();
+            });
+        });
+    </script>
+    <!-- End Past Chat -->
+</body>
+</html>
